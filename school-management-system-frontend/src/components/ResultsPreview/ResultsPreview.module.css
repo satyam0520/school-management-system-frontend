@@ -1,0 +1,149 @@
+.section {
+    background: var(--white);
+}
+
+.statsRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat {
+    background: linear-gradient(135deg, var(--gold-100), #fff9e6);
+    border: 1px solid var(--gold-400);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.statNum {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--gold-500);
+}
+
+.statLabel {
+    font-size: 0.78rem;
+    color: var(--neutral-700);
+    text-align: center;
+    font-weight: 500;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    position: relative;
+    background: var(--neutral-50);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+    border: 1px solid var(--neutral-200);
+    transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.awardIcon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--gold-400);
+    font-size: 1.25rem;
+}
+
+.avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gold-400);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--neutral-900);
+}
+
+.class {
+    font-size: 0.78rem;
+    color: var(--neutral-500);
+}
+
+.score {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-600);
+}
+
+.rank {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-600);
+    background: var(--accent-100);
+    padding: 0.2rem 0.6rem;
+    border-radius: 99px;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+}
+
+.skeleton {
+    height: 200px;
+    background: linear-gradient(90deg, var(--neutral-200) 25%, var(--neutral-100) 50%, var(--neutral-200) 75%);
+    background-size: 200% 100%;
+    border-radius: var(--radius-md);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: 200% 0;
+    }
+
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .grid,
+    .statsRow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .grid,
+    .statsRow {
+        grid-template-columns: 1fr;
+    }
+}

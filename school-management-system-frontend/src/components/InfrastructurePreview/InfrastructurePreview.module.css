@@ -1,0 +1,91 @@
+.section {
+    background: var(--neutral-50);
+}
+
+.mosaic {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 240px);
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.tile {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.large {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.tileImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.tile:hover .tileImg {
+    transform: scale(1.06);
+}
+
+.tileOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 22, 40, 0.75) 0%, transparent 50%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity var(--transition-med);
+}
+
+.tile:hover .tileOverlay {
+    opacity: 1;
+}
+
+.tileLabel {
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .mosaic {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .large {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: 200px;
+    }
+
+    .tile {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mosaic {
+        grid-template-columns: 1fr;
+    }
+
+    .large {
+        height: 200px;
+    }
+
+    .tile {
+        height: 180px;
+    }
+}

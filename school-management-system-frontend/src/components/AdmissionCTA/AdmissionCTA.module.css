@@ -1,0 +1,209 @@
+.section {
+    position: relative;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-700) 40%, var(--accent-600) 100%);
+    overflow: hidden;
+}
+
+/* Floating circles */
+.particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.particle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+}
+
+.particle:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: 20px;
+    right: 15%;
+}
+
+.particle:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    bottom: -20px;
+    left: 20%;
+}
+
+.particle:nth-child(4) {
+    width: 150px;
+    height: 150px;
+    bottom: -40px;
+    right: -30px;
+}
+
+.particle:nth-child(5) {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 35%;
+}
+
+.particle:nth-child(6) {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 60%;
+}
+
+.particle:nth-child(7) {
+    width: 40px;
+    height: 40px;
+    bottom: 20%;
+    right: 40%;
+}
+
+.particle:nth-child(8) {
+    width: 90px;
+    height: 90px;
+    top: 60%;
+    left: 10%;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.textBlock {
+    flex: 1;
+    min-width: 280px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.35rem 1rem;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.year {
+    color: var(--gold-400);
+}
+
+.description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    min-width: 220px;
+}
+
+.applyBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--white);
+    color: var(--primary-700);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.applyBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.contactBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.contactBtn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.deadline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.deadlineLabel {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.deadlineDate {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--gold-400);
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .description {
+        margin: 0 auto;
+    }
+
+    .actions {
+        width: 100%;
+        align-items: stretch;
+    }
+}

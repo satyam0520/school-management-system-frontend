@@ -1,0 +1,75 @@
+.page {
+    min-height: 80vh;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-700) 100%);
+    padding: 3rem 0 2.5rem;
+}
+
+.breadcrumb {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.breadcrumb a {
+    color: var(--accent-400);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+    color: var(--white);
+}
+
+.breadcrumb [aria-current="page"] {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 560px;
+}
+
+.comingSoon {
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--neutral-50);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2rem;
+    border: 1px solid var(--neutral-200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.icon {
+    font-size: 3rem;
+}
+
+.comingSoon h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-800);
+}
+
+.comingSoon p {
+    font-size: 0.95rem;
+    color: var(--neutral-600);
+    line-height: 1.7;
+    text-align: center;
+}

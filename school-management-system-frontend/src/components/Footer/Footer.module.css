@@ -1,0 +1,214 @@
+.footer {
+    background: var(--primary-900);
+    color: rgba(255, 255, 255, 0.75);
+    padding-top: 4rem;
+}
+
+/* Grid */
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1.4fr;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+/* Brand Column */
+.logoWrap {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.logoIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, var(--primary-500), var(--accent-500));
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    flex-shrink: 0;
+}
+
+.logoName {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.logoTag {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.socials {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.socials a:hover {
+    background: var(--primary-500);
+    border-color: var(--primary-500);
+    color: var(--white);
+}
+
+/* Link Columns */
+.colTitle {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+}
+
+.linkCol ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.linkCol a {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.65);
+    transition: color var(--transition-fast);
+}
+
+.linkCol a:hover {
+    color: var(--accent-400);
+}
+
+/* Contact Column */
+.contactItems {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.contactItem svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--accent-400);
+}
+
+.contactItem a {
+    color: rgba(255, 255, 255, 0.65);
+    transition: color var(--transition-fast);
+}
+
+.contactItem a:hover {
+    color: var(--accent-400);
+}
+
+.admissionCta {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    background: linear-gradient(135deg, var(--accent-600), var(--accent-500));
+    color: var(--white);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.admissionCta:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Bottom Bar */
+.bottomBar {
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem 0;
+}
+
+.bottomBarInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.bottomLinks a {
+    color: rgba(255, 255, 255, 0.45);
+    transition: color var(--transition-fast);
+}
+
+.bottomLinks a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .footerGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .brandCol {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .footerGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contactCol {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 400px) {
+    .footerGrid {
+        grid-template-columns: 1fr;
+    }
+}

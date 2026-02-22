@@ -1,0 +1,145 @@
+.section {
+    background: var(--white);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Image Column */
+.imageCol {}
+
+.imageWrap {
+    position: relative;
+}
+
+.mainImg {
+    width: 100%;
+    border-radius: var(--radius-xl);
+    object-fit: cover;
+    box-shadow: var(--shadow-xl);
+    aspect-ratio: 4/3;
+}
+
+.badge {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+    color: var(--white);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.badgeYear {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.badgeText {
+    font-size: 0.62rem;
+    opacity: 0.85;
+}
+
+.floatCard {
+    position: absolute;
+    bottom: -1.5rem;
+    left: -1.5rem;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 4px solid var(--accent-500);
+}
+
+.floatNum {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent-600);
+    line-height: 1;
+}
+
+.floatLabel {
+    font-size: 0.72rem;
+    color: var(--neutral-600);
+    text-align: center;
+}
+
+/* Text Column */
+.textCol {}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-600);
+    margin-bottom: 0.5rem;
+}
+
+.body {
+    font-size: 1rem;
+    color: var(--neutral-600);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 0.9rem;
+    background: var(--primary-50);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--primary-100);
+}
+
+.hIcon {
+    font-size: 1.1rem;
+}
+
+.hLabel {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--primary-700);
+}
+
+.cta {
+    margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .imageWrap {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
